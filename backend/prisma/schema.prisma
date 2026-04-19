@@ -29,6 +29,9 @@ model User {
   appointmentsAsDoc  Appointment[] @relation("DoctorAppointments")
   sentMessages       Message[]     @relation("SentMessages")
   receivedMessages   Message[]     @relation("ReceivedMessages")
+  doctorProfile      DoctorProfile?
+  reviewsGiven       Review[]      @relation("UserReviews")
+  reviewsReceived    Review[]      @relation("DoctorReviews")
 }
 
 model Pet {
@@ -76,3 +79,54 @@ model Message {
   receiverId String
   receiver   User   @relation("ReceivedMessages", fields: [receiverId], references: [id])
 }
+
+model DoctorProfile {
+  id              String   @id @default(uuid())
+  userId          String   @unique
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  // Basic Info
+  locationCity    String?
+  locationCountry String?
+  
+  // Professional Info
+  education       String?
+  certifications  String?
+  yearsOfExperience Int      @default(0)
+  
+  // Specialization
+  mainSpecialization String?
+  expertise          String? // JSON string
+  bio                String?
+  
+  // Practice Details
+  clinicName      String?
+  clinicAddress   String?
+  consultationFee Float    @default(0)
+  availableSlots  String?  // JSON string
+  
+  // Additional Info
+  languages       String?  // JSON string
+  rating          Float    @default(0)
+  totalPatients   Int      @default(0)
+  
+  isProfileComplete Boolean @default(false)
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Review {
+  id        String   @id @default(uuid())
+  rating    Int
+  comment   String?
+  
+  doctorId  String
+  doctor    User     @relation("DoctorReviews", fields: [doctorId], references: [id])
+  
+  userId    String
+  user      User     @relation("UserReviews", fields: [userId], references: [id])
+  
+  createdAt DateTime @default(now())
+}
+

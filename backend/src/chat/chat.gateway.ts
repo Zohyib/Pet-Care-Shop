@@ -53,13 +53,13 @@ export class ChatGateway implements OnGatewayConnection, OnGatewayDisconnect {
     }
   }
 
-  private registerSocket(userId: string, socketId: string) {
+  private registerSocket(userId: string, client: Socket) {
     if (!this.userSockets.has(userId)) {
       this.userSockets.set(userId, new Set());
     }
-    this.userSockets.get(userId)!.add(socketId);
+    this.userSockets.get(userId)!.add(client.id);
     // Also join a named room so we can target the user easily
-    this.server.sockets.sockets.get(socketId)?.join(`user:${userId}`);
+    client.join(`user:${userId}`);
   }
 
   private unregisterSocket(userId: string, socketId: string) {
@@ -83,7 +83,7 @@ export class ChatGateway implements OnGatewayConnection, OnGatewayDisconnect {
     }
 
     client.data.userId = userId;
-    this.registerSocket(userId, client.id);
+    this.registerSocket(userId, client);
 
     this.logger.log(`[WS] Connected: userId=${userId}, socketId=${client.id}`);
     client.emit('connected', { userId, socketId: client.id });

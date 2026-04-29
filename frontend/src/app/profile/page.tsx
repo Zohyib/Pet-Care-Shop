@@ -162,7 +162,7 @@ export default function UnifiedProfilePage() {
       
       toast.success('Profile updated successfully!');
       setIsEditing(false);
-      setFormData(prev => ({ ...prev, oldPassword: '', newPassword: '', confirmPassword: '' }));
+      setFormData((prev: any) => ({ ...prev, oldPassword: '', newPassword: '', confirmPassword: '' }));
       fetchProfile();
     } catch (err: any) {
       toast.error(err.response?.data?.message || 'Failed to update profile');

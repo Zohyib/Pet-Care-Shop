@@ -6,7 +6,14 @@ export class PrismaService extends PrismaClient implements OnModuleInit {
   private readonly logger = new Logger(PrismaService.name);
 
   constructor() {
-    super();
+    const dbPath = `file:${require('path').join(process.cwd(), 'prisma', 'prisma', 'dev.db')}`;
+    super({
+      datasources: {
+        db: {
+          url: dbPath,
+        },
+      },
+    });
   }
 
   async onModuleInit() {

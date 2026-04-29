@@ -216,7 +216,7 @@ export default function ChatPage() {
       {/* ── Sidebar ── */}
       <aside className="w-80 border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 flex flex-col z-20 shrink-0">
         {/* Header */}
-        <div className="p-6 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-indigo-600">
+        <div className="p-6 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-gradient-premium shadow-md z-10">
           <div className="flex items-center gap-3">
             <PawPrint className="w-6 h-6 text-white" />
             <h1 className="text-xl font-bold text-white">Chat</h1>
@@ -274,7 +274,7 @@ export default function ChatPage() {
               }}
               className={`w-full flex items-center gap-3 p-3 rounded-2xl transition-all text-left ${
                 activeContact?.id === contact.id
-                  ? 'bg-indigo-600 text-white shadow-md shadow-indigo-500/20'
+                  ? 'bg-gradient-premium text-white shadow-lg shadow-indigo-500/25'
                   : 'hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300'
               }`}
             >
@@ -361,7 +361,7 @@ export default function ChatPage() {
                         )}
                         <div className={`max-w-[65%] px-4 py-3 rounded-2xl whitespace-pre-wrap break-words ${
                           isMe
-                            ? 'bg-indigo-600 text-white rounded-br-sm shadow-md shadow-indigo-500/20'
+                            ? 'bg-gradient-premium text-white rounded-br-sm shadow-md shadow-indigo-500/20'
                             : 'bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-100 rounded-bl-sm shadow-sm border border-slate-100 dark:border-slate-700'
                         }`}>
                           <p className="text-[14px] leading-relaxed">{msg.content}</p>
@@ -418,7 +418,7 @@ export default function ChatPage() {
                 <Button
                   type="submit"
                   disabled={!inputText.trim() || !isConnected || isSending}
-                  className="h-12 w-12 bg-indigo-600 hover:bg-indigo-700 disabled:opacity-40 text-white rounded-2xl shadow-lg transition-transform active:scale-95 shrink-0"
+                  className="h-12 w-12 bg-gradient-premium hover:opacity-90 disabled:opacity-40 text-white rounded-2xl shadow-lg transition-transform active:scale-95 shrink-0"
                 >
                   {isSending ? <Loader2 className="w-4 h-4 animate-spin" /> : <Send className="w-4 h-4 ml-0.5" />}
                 </Button>

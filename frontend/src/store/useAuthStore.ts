@@ -1,16 +1,19 @@
 import { create } from 'zustand';
 
 interface User {
+  id?: string;
   email: string;
   sub: string;
   role: string;
   name?: string;
+  avatarUrl?: string;
 }
 
 interface AuthState {
   user: User | null;
   token: string | null;
   setAuth: (user: User, token: string) => void;
+  setUser: (user: Partial<User>) => void;
   logout: () => void;
 }
 
@@ -18,5 +21,6 @@ export const useAuthStore = create<AuthState>((set) => ({
   user: null,
   token: null,
   setAuth: (user, token) => set({ user, token }),
+  setUser: (partial) => set((state) => ({ user: state.user ? { ...state.user, ...partial } : state.user })),
   logout: () => set({ user: null, token: null }),
 }));

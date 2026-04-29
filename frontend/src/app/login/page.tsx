@@ -59,7 +59,7 @@ export default function LoginPage() {
             <motion.div 
               whileHover={{ rotate: 180 }}
               transition={{ duration: 0.5 }}
-              className="bg-indigo-600 p-3 rounded-2xl shadow-lg shadow-indigo-600/30 mb-4"
+              className="bg-gradient-premium p-3 rounded-2xl shadow-lg shadow-indigo-600/30 mb-4"
             >
               <PawPrint className="w-8 h-8 text-white" />
             </motion.div>
@@ -96,7 +96,7 @@ export default function LoginPage() {
             <Button 
               type="submit" 
               disabled={isLoading}
-              className="w-full h-12 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-medium shadow-lg shadow-indigo-600/25 transition-all active:scale-[0.98]"
+              className="w-full h-12 bg-gradient-premium hover:opacity-90 text-white rounded-xl font-bold shadow-lg shadow-indigo-600/25 transition-all active:scale-[0.98]"
             >
               {isLoading ? <Loader2 className="mr-2 h-5 w-5 animate-spin" /> : 'Sign in'}
             </Button>
@@ -112,8 +112,8 @@ export default function LoginPage() {
       </div>
       
       {/* Decorative right side for larger screens */}
-      <div className="hidden lg:flex lg:flex-1 bg-indigo-600 overflow-hidden relative justify-center items-center">
-        <div className="absolute inset-0 bg-gradient-to-br from-indigo-500 to-purple-700 opacity-90" />
+      <div className="hidden lg:flex lg:flex-1 bg-slate-900 overflow-hidden relative justify-center items-center">
+        <div className="absolute inset-0 bg-gradient-premium opacity-90" />
         <motion.div 
           animate={{ y: [0, -20, 0] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}

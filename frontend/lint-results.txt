@@ -1,0 +1,175 @@
+
+C:\Users\Moiz Hanif\Downloads\pet-shop-website-template 2\pet-shop-website-template 2\frontend\src\app\about\page.tsx
+   4:32   warning  'Shield' is defined but never used                                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+   4:40   warning  'PawPrint' is defined but never used                                                                                                                                                                                                                                                     @typescript-eslint/no-unused-vars
+  41:17   warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  57:166  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+
+C:\Users\Moiz Hanif\Downloads\pet-shop-website-template 2\pet-shop-website-template 2\frontend\src\app\admin\appointments\page.tsx
+   7:28  warning  'Clock' is defined but never used         @typescript-eslint/no-unused-vars
+  32:57  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  68:43  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\Moiz Hanif\Downloads\pet-shop-website-template 2\pet-shop-website-template 2\frontend\src\app\admin\doctors\page.tsx
+   32:47   error  Unexpected any. Specify a different type                         @typescript-eslint/no-explicit-any
+   59:41   error  Unexpected any. Specify a different type                         @typescript-eslint/no-explicit-any
+  121:86   error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  121:113  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\Users\Moiz Hanif\Downloads\pet-shop-website-template 2\pet-shop-website-template 2\frontend\src\app\admin\login\page.tsx
+  34:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\Moiz Hanif\Downloads\pet-shop-website-template 2\pet-shop-website-template 2\frontend\src\app\admin\orders\page.tsx
+   6:10  warning  'Button' is defined but never used        @typescript-eslint/no-unused-vars
+   7:10  warning  'ShoppingBag' is defined but never used   @typescript-eslint/no-unused-vars
+  21:45  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  57:39  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  96:46  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\Moiz Hanif\Downloads\pet-shop-website-template 2\pet-shop-website-template 2\frontend\src\app\admin\products\page.tsx
+  33:49  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+  73:49  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+  79:29  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\Moiz Hanif\Downloads\pet-shop-website-template 2\pet-shop-website-template 2\frontend\src\app\admin\sellers\page.tsx
+  32:47  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  58:41  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\Moiz Hanif\Downloads\pet-shop-website-template 2\pet-shop-website-template 2\frontend\src\app\admin\sellers\requests\page.tsx
+   7:48  warning  'ExternalLink' is defined but never used                         @typescript-eslint/no-unused-vars
+  41:35  error    Unexpected any. Specify a different type                         @typescript-eslint/no-explicit-any
+  76:23  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  76:75  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\Users\Moiz Hanif\Downloads\pet-shop-website-template 2\pet-shop-website-template 2\frontend\src\app\admin\users\page.tsx
+  43:43  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  82:43  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\Moiz Hanif\Downloads\pet-shop-website-template 2\pet-shop-website-template 2\frontend\src\app\ai-vet\page.tsx
+   6:23  warning  'ArrowRight' is defined but never used                           @typescript-eslint/no-unused-vars
+   8:10  warning  'Input' is defined but never used                                @typescript-eslint/no-unused-vars
+  37:19  error    Unexpected any. Specify a different type                         @typescript-eslint/no-explicit-any
+  77:42  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Moiz Hanif\Downloads\pet-shop-website-template 2\pet-shop-website-template 2\frontend\src\app\cart\page.tsx
+   7:8   warning  'Link' is defined but never used                                                                                                                                                                                                                                                         @typescript-eslint/no-unused-vars
+  21:59  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  36:35  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\Moiz Hanif\Downloads\pet-shop-website-template 2\pet-shop-website-template 2\frontend\src\app\chat\page.tsx
+  411:40  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\Moiz Hanif\Downloads\pet-shop-website-template 2\pet-shop-website-template 2\frontend\src\app\checkout\page.tsx
+  47:21  error  Unexpected any. Specify a different type                         @typescript-eslint/no-explicit-any
+  61:70  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Moiz Hanif\Downloads\pet-shop-website-template 2\pet-shop-website-template 2\frontend\src\app\dashboard\become-seller\page.tsx
+  40:21  error  Unexpected any. Specify a different type                         @typescript-eslint/no-explicit-any
+  72:47  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Moiz Hanif\Downloads\pet-shop-website-template 2\pet-shop-website-template 2\frontend\src\app\dashboard\page.tsx
+    8:30   warning  'LogOut' is defined but never used                               @typescript-eslint/no-unused-vars
+    8:44   warning  'Activity' is defined but never used                             @typescript-eslint/no-unused-vars
+    8:62   warning  'UserIcon' is defined but never used                             @typescript-eslint/no-unused-vars
+    8:72   warning  'MessageSquare' is defined but never used                        @typescript-eslint/no-unused-vars
+    8:87   warning  'Bot' is defined but never used                                  @typescript-eslint/no-unused-vars
+   17:17   warning  'logout' is assigned a value but never used                      @typescript-eslint/no-unused-vars
+   32:64   error    Unexpected any. Specify a different type                         @typescript-eslint/no-explicit-any
+   70:17   error    Unexpected any. Specify a different type                         @typescript-eslint/no-explicit-any
+   82:21   error    Unexpected any. Specify a different type                         @typescript-eslint/no-explicit-any
+   97:21   error    Unexpected any. Specify a different type                         @typescript-eslint/no-explicit-any
+  146:74   error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  152:38   error    Unexpected any. Specify a different type                         @typescript-eslint/no-explicit-any
+  183:45   error    Unexpected any. Specify a different type                         @typescript-eslint/no-explicit-any
+  238:44   error    Unexpected any. Specify a different type                         @typescript-eslint/no-explicit-any
+  384:123  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Moiz Hanif\Downloads\pet-shop-website-template 2\pet-shop-website-template 2\frontend\src\app\dashboard\seller\orders\page.tsx
+  127:31  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\Moiz Hanif\Downloads\pet-shop-website-template 2\pet-shop-website-template 2\frontend\src\app\dashboard\seller\products\page.tsx
+  111:21  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\Moiz Hanif\Downloads\pet-shop-website-template 2\pet-shop-website-template 2\frontend\src\app\doctor-profile-setup\page.tsx
+   5:19  warning  'Controller' is defined but never used        @typescript-eslint/no-unused-vars
+   7:10  warning  'User' is defined but never used              @typescript-eslint/no-unused-vars
+   7:55  warning  'Languages' is defined but never used         @typescript-eslint/no-unused-vars
+   7:66  warning  'Star' is defined but never used              @typescript-eslint/no-unused-vars
+  21:45  warning  'control' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  21:67  warning  'errors' is assigned a value but never used   @typescript-eslint/no-unused-vars
+  50:29  error    Unexpected any. Specify a different type      @typescript-eslint/no-explicit-any
+  53:16  warning  'err' is defined but never used               @typescript-eslint/no-unused-vars
+  62:33  error    Unexpected any. Specify a different type      @typescript-eslint/no-explicit-any
+  72:19  error    Unexpected any. Specify a different type      @typescript-eslint/no-explicit-any
+
+C:\Users\Moiz Hanif\Downloads\pet-shop-website-template 2\pet-shop-website-template 2\frontend\src\app\doctors\[id]\page.tsx
+    8:16  warning  'MapPin' is defined but never used                                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+    8:35  warning  'Stethoscope' is defined but never used                                                                                                                                                                                                                                                  @typescript-eslint/no-unused-vars
+   57:17  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+   90:17  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+  136:17  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  257:56  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+  331:28  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  336:38  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+  377:26  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+
+C:\Users\Moiz Hanif\Downloads\pet-shop-website-template 2\pet-shop-website-template 2\frontend\src\app\doctors\page.tsx
+    6:18  warning  'AnimatePresence' is defined but never used                                                                                                                                                                                                                                              @typescript-eslint/no-unused-vars
+   11:10  warning  'useAuthStore' is defined but never used                                                                                                                                                                                                                                                 @typescript-eslint/no-unused-vars
+   39:26  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  104:57  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+  113:23  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  168:26  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+
+C:\Users\Moiz Hanif\Downloads\pet-shop-website-template 2\pet-shop-website-template 2\frontend\src\app\login\page.tsx
+   42:19  error  Unexpected any. Specify a different type                         @typescript-eslint/no-explicit-any
+  106:16  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Moiz Hanif\Downloads\pet-shop-website-template 2\pet-shop-website-template 2\frontend\src\app\orders\page.tsx
+   6:29  warning  'CardHeader' is defined but never used                                                                                                                                                                                                                                                   @typescript-eslint/no-unused-vars
+   6:41  warning  'CardTitle' is defined but never used                                                                                                                                                                                                                                                    @typescript-eslint/no-unused-vars
+  38:34  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+  70:46  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+  74:29  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\Moiz Hanif\Downloads\pet-shop-website-template 2\pet-shop-website-template 2\frontend\src\app\page.tsx
+   59:146  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  226:20   warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  243:19   warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  306:89   error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  306:108  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+
+C:\Users\Moiz Hanif\Downloads\pet-shop-website-template 2\pet-shop-website-template 2\frontend\src\app\register\page.tsx
+  44:19  error  Unexpected any. Specify a different type                         @typescript-eslint/no-explicit-any
+  64:48  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Moiz Hanif\Downloads\pet-shop-website-template 2\pet-shop-website-template 2\frontend\src\app\shop\page.tsx
+    8:29  warning  'CardDescription' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+    8:46  warning  'CardFooter' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            @typescript-eslint/no-unused-vars
+    8:58  warning  'CardHeader' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            @typescript-eslint/no-unused-vars
+    8:70  warning  'CardTitle' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             @typescript-eslint/no-unused-vars
+    9:38  warning  'Filter' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                @typescript-eslint/no-unused-vars
+   28:49  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          @typescript-eslint/no-explicit-any
+   34:37  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          @typescript-eslint/no-explicit-any
+  103:46  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          @typescript-eslint/no-explicit-any
+  107:21  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           @next/next/no-img-element
+  135:80  error    Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Users\Moiz Hanif\Downloads\pet-shop-website-template 2\pet-shop-website-template 2\frontend\src\app\shop\page.tsx:135:80
+  133 |                     <Star className="w-4 h-4 fill-amber-400 text-amber-400" />
+  134 |                     <span className="text-sm font-medium text-slate-700 dark:text-slate-300">4.8</span>
+> 135 |                     <span className="text-xs text-slate-400 ml-1">({Math.floor(Math.random() * 100) + 10})</span>
+      |                                                                                ^^^^^^^^^^^^^ Cannot call impure function
+  136 |                   </div>
+  137 |                   <p className="text-sm text-slate-600 dark:text-slate-400 line-clamp-2 mb-4 flex-1">
+  138 |                     {product.description}  react-hooks/purity
+
+C:\Users\Moiz Hanif\Downloads\pet-shop-website-template 2\pet-shop-website-template 2\frontend\src\components\Footer.tsx
+  20:53  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Moiz Hanif\Downloads\pet-shop-website-template 2\pet-shop-website-template 2\frontend\src\components\ui\textarea.tsx
+  4:18  error  An interface declaring no members is equivalent to its supertype  @typescript-eslint/no-empty-object-type
+
+✖ 108 problems (64 errors, 44 warnings)

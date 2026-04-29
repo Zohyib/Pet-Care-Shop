@@ -1,4 +1,4 @@
-import { Controller, Get, UseGuards, Request } from '@nestjs/common';
+import { Controller, Get, Put, Body, UseGuards, Request } from '@nestjs/common';
 import { UsersService } from './users.service';
 import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 import { RolesGuard } from '../auth/roles.guard';
@@ -11,9 +11,18 @@ export class UsersController {
   @Get('contacts')
   async getContacts(@Request() req: any) {
     const roleToFind = req.user.role === 'DOCTOR' ? 'USER' : 'DOCTOR';
-    return (this.usersService as any).prisma.user.findMany({
-      where: { role: roleToFind },
-      select: { id: true, name: true, role: true, email: true },
-    });
+    return this.usersService.findContacts(roleToFind);
+  }
+
+  @Get('profile/me')
+  async getMyProfile(@Request() req: any) {
+    const userId = req.user.id || req.user._id?.toString();
+    return this.usersService.getProfile(userId);
+  }
+
+  @Put('profile/me')
+  async updateMyProfile(@Request() req: any, @Body() body: any) {
+    const userId = req.user.id || req.user._id?.toString();
+    return this.usersService.updateProfile(userId, body);
   }
 }

@@ -51,8 +51,8 @@ export default function RegisterPage() {
   return (
     <div className="min-h-screen w-full flex bg-gradient-to-br from-indigo-50 via-white to-purple-50 dark:from-slate-900 dark:via-slate-900 dark:to-indigo-950">
       
-      <div className="hidden lg:flex lg:flex-1 bg-purple-600 overflow-hidden relative justify-center items-center">
-        <div className="absolute inset-0 bg-gradient-to-tr from-purple-700 to-indigo-500 opacity-90" />
+      <div className="hidden lg:flex lg:flex-1 bg-slate-900 overflow-hidden relative justify-center items-center">
+        <div className="absolute inset-0 bg-gradient-premium opacity-90" />
         <motion.div 
           animate={{ y: [0, 20, 0] }}
           transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
@@ -132,7 +132,7 @@ export default function RegisterPage() {
             <Button 
               type="submit" 
               disabled={isLoading}
-              className="w-full h-11 bg-purple-600 hover:bg-purple-700 text-white rounded-xl font-medium shadow-lg shadow-purple-600/25 transition-all mt-4"
+              className="w-full h-11 bg-gradient-premium hover:opacity-90 text-white rounded-xl font-bold shadow-lg shadow-purple-600/25 transition-all mt-4"
             >
               {isLoading ? <Loader2 className="mr-2 h-5 w-5 animate-spin" /> : 'Create Account'}
             </Button>

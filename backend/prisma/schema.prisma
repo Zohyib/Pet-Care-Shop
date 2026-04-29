@@ -17,6 +17,7 @@ model User {
   email     String   @unique
   password  String
   role      String   @default("USER")
+  status    String   @default("ACTIVE") // ACTIVE, BLOCKED, SUSPENDED, PENDING
   name      String
   phone     String?
   avatarUrl String?
@@ -32,6 +33,9 @@ model User {
   doctorProfile      DoctorProfile?
   reviewsGiven       Review[]      @relation("UserReviews")
   reviewsReceived    Review[]      @relation("DoctorReviews")
+  products         Product[]     @relation("SellerProducts")
+  orders           Order[]       @relation("UserOrders")
+  sellerProfile    SellerProfile?
 }
 
 model Pet {
@@ -56,6 +60,8 @@ model Appointment {
   status    String   @default("PENDING")
   notes     String?
   prescriptions String?
+  amount        Float?
+  paymentId     String? // Stripe payment intent ID
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
@@ -130,3 +136,60 @@ model Review {
   createdAt DateTime @default(now())
 }
 
+model Product {
+  id          String   @id @default(uuid())
+  name        String
+  description String
+  price       Float
+  imageUrl    String?
+  category    String
+  stock       Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  sellerId    String
+  seller      User     @relation("SellerProducts", fields: [sellerId], references: [id])
+  orderItems  OrderItem[]
+}
+
+model Order {
+  id          String      @id @default(uuid())
+  totalAmount Float
+  status      String      @default("PENDING") // PENDING, PAID, SHIPPED, DELIVERED, CANCELLED
+  paymentId   String?     // Stripe Payment Intent ID
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+
+  userId      String
+  user        User        @relation("UserOrders", fields: [userId], references: [id])
+  items       OrderItem[]
+}
+
+model OrderItem {
+  id        String   @id @default(uuid())
+  quantity  Int
+  price     Float    // Price at time of purchase
+  createdAt DateTime @default(now())
+
+  orderId   String
+  order     Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  productId String
+  product   Product  @relation(fields: [productId], references: [id])
+}
+model SellerProfile {
+  id            String   @id @default(uuid())
+  userId        String   @unique
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  businessName  String
+  contactNumber String
+  address       String
+  category      String   // toys, food, accessories
+  description   String?
+  status        String   @default("PENDING") // PENDING, APPROVED, REJECTED
+  
+  stripeAccountId String? // For Stripe Connect
+  
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}

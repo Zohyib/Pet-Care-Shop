@@ -1,45 +1,34 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
-import { PrismaService } from '../prisma/prisma.service';
+import { InjectModel } from '@nestjs/mongoose';
+import { Model, Types } from 'mongoose';
+import { Pet, PetDocument } from '../schemas/pet.schema';
 
 @Injectable()
 export class PetsService {
-  constructor(private prisma: PrismaService) {}
+  constructor(@InjectModel(Pet.name) private petModel: Model<PetDocument>) {}
 
   async create(ownerId: string, data: any) {
-    return (this.prisma as any).pet.create({
-      data: {
-        ...data,
-        ownerId,
-      },
-    });
+    const pet = await this.petModel.create({ ...data, ownerId: new Types.ObjectId(ownerId) });
+    return { ...pet.toObject(), id: pet._id?.toString() };
   }
 
   async findAllByOwner(ownerId: string) {
-    return (this.prisma as any).pet.findMany({
-      where: { ownerId },
-      orderBy: { createdAt: 'desc' },
-    });
+    const pets = await this.petModel.find({ ownerId: new Types.ObjectId(ownerId) }).sort({ createdAt: -1 }).lean();
+    return pets.map(p => ({ ...p, id: (p as any)._id?.toString() }));
   }
 
   async findOne(id: string) {
-    const pet = await (this.prisma as any).pet.findUnique({
-      where: { id },
-      include: { owner: { select: { name: true, email: true } } },
-    });
+    const pet = await this.petModel.findById(id).populate('ownerId', 'name email').lean();
     if (!pet) throw new NotFoundException('Pet not found');
-    return pet;
+    return { ...pet, id: (pet as any)._id?.toString() };
   }
 
   async update(id: string, data: any) {
-    return (this.prisma as any).pet.update({
-      where: { id },
-      data,
-    });
+    const pet = await this.petModel.findByIdAndUpdate(id, data, { returnDocument: 'after' }).lean();
+    return { ...pet, id: (pet as any)?._id?.toString() };
   }
 
   async delete(id: string) {
-    return (this.prisma as any).pet.delete({
-      where: { id },
-    });
+    return this.petModel.findByIdAndDelete(id);
   }
 }
